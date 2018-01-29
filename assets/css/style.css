@@ -1,0 +1,448 @@
+
+
+/**! 1. Reset **/
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a {
+  margin: 0;
+  padding: 0;
+}
+/**! 2. Helper Classes **/
+.clearfix {
+  overflow: hidden;
+}
+.allow-overflow {
+  overflow: visible;
+}
+.container .row--gapless {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container .row--gapless > div[class*='col-'] {
+  padding: 0;
+}
+section > .row--gapless {
+  padding-left: 0;
+  padding-right: 0;
+}
+section > .row--gapless > div[class*='col-'] {
+  padding: 0;
+}
+.unpad {
+  padding: 0 !important;
+}
+
+.pad-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.unpad--left {
+    padding-left: 0px !important;
+}
+
+.unpad--right {
+    padding-right: 0px !important;
+}
+
+.unpad--bottom {
+  padding-bottom: 0;
+}
+.unpad--top {
+  padding-top: 0;
+}
+section.unpad--bottom {
+  padding-bottom: 0;
+}
+section.unpad {
+  padding: 0;
+}
+section.unpad--top {
+  padding-top: 0;
+}
+.unmarg--bottom {
+  margin-bottom: 0;
+}
+.unmarg {
+  margin: 0;
+}
+div.right {
+  float: right;
+}
+div.left {
+  float: left;
+}
+/**! 3. Typography **/
+html {
+  font-size: 100%;
+}
+@media all and (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+body {
+  font-size: 1em;
+  line-height: 1.625em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:'Helvetica', 'Arial', sans-serif;
+  color: #767676;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+  color: #343434;
+  font-weight: 600;
+  font-variant-ligatures: common-ligatures;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1,
+.h1 {
+  font-size: 4em;
+  line-height: 1.015625em;
+}
+h2,
+.h2 {
+  font-size: 2.8125em;
+  line-height: 1.15555556em;
+}
+h3,
+.h3 {
+  font-size: 2em;
+  line-height: 1.421875em;
+}
+h4,
+.h4 {
+  font-size: 1.4375em;
+  line-height: 1.41304348em;
+}
+h5,
+.h5 {
+  font-size: 1em;
+  line-height: 1.625em;
+}
+h6,
+.h6 {
+  font-size: 0.625em;
+  line-height: 2.6em;
+}
+.lead {
+  font-size: 1.4375em;
+  line-height: 1.69565217em;
+}
+@media all and (max-width: 767px) {
+  h1,
+  .h1 {
+    font-size: 2.8125em;
+    line-height: 1.15555556em;
+  }
+  h2,
+  .h2 {
+    font-size: 2em;
+    line-height: 1.421875em;
+  }
+  h3,
+  .h3 {
+    font-size: 1.4375em;
+    line-height: 1.625em;
+  }
+  .lead {
+    font-size: 1.4375em;
+    line-height: 1.41304348em;
+  }
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-bottom: 1.625em;
+}
+ul,
+ol {
+  list-style: none;
+}
+ul:not(.menu):not(.slides):not(.accordion):not(.tabs):not(.tabs-content),
+ol:not(.menu):not(.slides):not(.accordion):not(.tabs):not(.tabs-content) {
+  line-height: 2.34375em;
+}
+ul.bullets {
+  list-style: inside;
+}
+ol {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+blockquote {
+  font-size: 1.9em;
+  line-height: 1.321875em;
+  padding: 0;
+  margin: 0;
+  border-left: 0;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 300;
+}
+strong {
+  font-weight: 600;
+}
+hr {
+  margin: 1.625em 0;
+  border-color: #f4f4f4;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+/*! Typography -- Helpers */
+.type--fade {
+  opacity: .5;
+}
+.type--uppercase {
+  text-transform: uppercase;
+}
+.type--bold {
+  font-weight: bold;
+}
+.type--italic {
+  font-style: italic;
+}
+.type--fine-print {
+  font-size: 0.6875em;
+}
+.type--strikethrough {
+  text-decoration: line-through;
+  opacity: .5;
+}
+.type--underline {
+  text-decoration: underline;
+}
+.type--body-font {
+  font-family: 'Lora', 'Helvetica';
+}
+/**! 4. Position **/
+body {
+  overflow-x: hidden;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+.pos-absolute.container {
+  left: 0;
+  right: 0;
+}
+.pos-top {
+  top: 0;
+}
+.pos-bottom {
+  bottom: 0;
+}
+.pos-right {
+  right: 0;
+}
+.pos-left {
+  left: 0;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+.centered {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-100 {
+margin-top: 100px;
+}
+
+.mt-150 {
+  margin-top: 150px;
+}
+@media all and (max-width: 767px) {
+  .float-left,
+  .float-right {
+    float: none;
+  }
+  .float-left-xs {
+    float: left;
+  }
+  .float-right-xs {
+    float: right;
+  }
+}
+.pos-vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.brand-strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  font-family: "Montserrat";
+}
+
+#h {
+  background: url("../img/header.jpg") no-repeat center top;
+  padding-top: 240px;
+  background-attachment: relative;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+#h h2, #h h4 {
+  color: white;
+}
+
+.thin > red {
+  font-weight: bold;
+  color: #ff8180;
+}
+
+.btn-special {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+#brands {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #F5F5F5;
+}
+
+#first-section {
+  width: 100%;
+  background-color: #e8ebf8;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#first-section h3, #first-section p {
+  color: #6c6b7f;
+}
+
+
+.no-pl {
+  padding-left: 0px !important;
+}
+
+.no-pr {
+  padding-right: 0px !important
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.sh {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#second-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#testimonial {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f8f9fa;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+#colored {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #28206c;
+  color: white;
+}
+
+#colored h3, #colored h4 {
+  color: white;
+}
+
+#colored input {
+  background-color: transparent !important; 
+  border: 1px solid white;
+    padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+#footer {
+  padding-top: 60px;
+  padding-bottom: 35px;
+  background-color: white;
+}
